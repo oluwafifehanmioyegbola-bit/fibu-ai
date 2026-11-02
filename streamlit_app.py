@@ -39,7 +39,8 @@ with tab2:
     style = st.selectbox("Style", ["Realistic", "Anime", "3D Render", "Cartoon", "Cyberpunk"])
     
     if st.button("Generate Image 🎨", use_container_width=True):
-        full_prompt = f"{img_prompt}, {style} style, high quality, detailed"
+                full_prompt = f"{img_prompt}, {style} style"
         encoded = urllib.parse.quote(full_prompt)
-        # Using Pollinations - 100% free, no key needed
-        image_url = f"https://image.pollinations.ai/prompt/{encoded}?width=1024&height=102
+        # Using Pollinations - 100% free
+        image_url = f"https://image.pollinations.ai/prompt/{encoded}"
+        st.image(image_url)
